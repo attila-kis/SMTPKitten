@@ -130,7 +130,7 @@ extension Mail {
         headers.reserveCapacity(16)
 
         headers["MIME-Version"] = "1.0"
-        if headers[Message-Id"] == nil{
+        if headers["Message-Id"] == nil{
             headers["Message-Id"] = "<\(UUID().uuidString)@\(host)>"
         }
         headers["Date"] = Date().smtpFormatted
